@@ -79,17 +79,6 @@ print(type(example_set))
 example_set.add(1) # Adding elements to a set
 print(example_set) # Duplicates are not allowed in a set
 
-# COMPARISON OPERATORS
-a = 10
-b = 20
-
-print(a == b)   # False
-print(a != b)   # True
-print(a < b)    # True
-print(a > b)    # False
-print(a <= b)   # True
-print(a >= b)   # False
-
 # FUNCTIONS
 # Las funciones en Python requieren una palabra clave para definirlas: def seguida de un identificador (un nombre) que forma la firma de la función. El cuerpo de la función contiene el código que se ejecutará cuando se llame a la función.
 def say_hello():
