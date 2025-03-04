@@ -90,22 +90,6 @@ print(a > b)    # False
 print(a <= b)   # True
 print(a >= b)   # False
 
-
-# print() FUNCTION
-# Esta función busca el dispositivo de salida predeterminado, su terminal, y muestra el valor que se le pasa.
-print("Hello")
-
-# INPUT FUNCTION
-# Esta función busca el dispositivo de entrada predeterminado, su teclado, y captura el valor. 
-# Este valor se puede asignar o utilizar.
-print("Where do you live?")
-location = input()
-print("I live in " + location)
-
-# len() FUNCTION
-# Esta función devuelve la longitud o el recuento de los elementos contenidos en la estructura en la que se aplica. Puede ser una cadena, una matriz, una lista, una tupla, un diccionario o cualquier secuencia.
-print(len("Hello")) # 5
-
 # FUNCTIONS
 # Las funciones en Python requieren una palabra clave para definirlas: def seguida de un identificador (un nombre) que forma la firma de la función. El cuerpo de la función contiene el código que se ejecutará cuando se llame a la función.
 def say_hello():
