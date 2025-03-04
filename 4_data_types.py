@@ -106,19 +106,6 @@ print("I live in " + location)
 # Esta función devuelve la longitud o el recuento de los elementos contenidos en la estructura en la que se aplica. Puede ser una cadena, una matriz, una lista, una tupla, un diccionario o cualquier secuencia.
 print(len("Hello")) # 5
 
-# str() FUNCTION
-# Esta función se puede utilizar para convertir el valor proporcionado en una String
-print(str(10)) # '10'
-
-# int() FUNCTION
-# Esta función se puede utilizar para convertir el valor proporcionado en un int
-print(int('55')) # 55
-
-# float() FUNCTION
-# Esta función se puede utilizar para convertir el valor proporcionado en un float
-some_int = 10
-print(float(some_int)) # 10.0
-
 # FUNCTIONS
 # Las funciones en Python requieren una palabra clave para definirlas: def seguida de un identificador (un nombre) que forma la firma de la función. El cuerpo de la función contiene el código que se ejecutará cuando se llame a la función.
 def say_hello():
