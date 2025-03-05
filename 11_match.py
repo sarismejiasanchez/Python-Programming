@@ -1,6 +1,6 @@
 # MATCH STATEMENT
 
-http_status = 501
+http_status = 200
 
 if http_status == 200 or http_status == 201:
     print("Success")
@@ -39,12 +39,3 @@ match http_status:
     case _:
         print("Unknown")
 '''
-
-"""
-    case 400:
-        print("Not Found")
-    case 500 | 501:
-        print("Server Error")
-    case _:
-        print("Unknown")
-    """
