@@ -74,4 +74,8 @@ Notice how, in this block of code, if you change the data structure to use a dic
 The main difference is that you no longer need to iterate through the list to locate them.
 If the list expands to a much larger size, the search time to find the employee remains the same.
 This is a good example of how to choose the right data structure for the solution.
+Both work well, but the balance to consider is time and scale.
+The first solution will work well for small amounts of data, but it loses performance as the data increases.
+The second solution is better suited for large amounts of data, as its structure allows for constant search time and thus accesses large amounts of data at a consistent speed.
+This example shows that there is no one-size-fits-all solution and that the choice of data structure should be carefully considered based on the solution's constraints.
 """
