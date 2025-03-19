@@ -51,17 +51,57 @@ Relative paths are the path to the file starting from the current directory.
 
 # Example of reading a file from a different directory
 # Absolute path
-with open("C:/Users/username/Documents/newfile.txt", "r") as file:
-    content = file.read()
-    print(content)
-
+try:
+    with open("C:/Users/username/Documents/newfile.txt", "r") as file:
+        content = file.read()
+        print(content)
+except FileNotFoundError:
+    print("File not found")
+    
 # Relative path
-with open("../Documents/newfile.txt", "r") as file:
-    content = file.read()
-    print(content)
-
+try:
+    with open("../Documents/newfile.txt", "r") as file:
+        content = file.read()
+        print(content)
+except FileNotFoundError:
+    print("File not found")
+    
 # Example of reading a file from a different directory
 # Up two levels from the current directory
-with open("../../newfile.txt", "r") as file:
-    content = file.read()
-    print(content)
+try:
+    with open("../../newfile.txt", "r") as file:
+        content = file.read()
+        print(content)
+except FileNotFoundError:
+    print("File not found")
+
+"""
+Storing file contents in data structures
+
+Imagine you are trying to find a name for your new dog. You are not sure what you would like to call it, so you decide to use your Python knowledge to help you decide.
+First, access a file (petnames.txt) containing a list of names you like for your new pet.
+Now that you have the petnames.txt file, you would like to use it within your Python program to randomly select a single pet name.
+You should read the file content and store the result in the variable f_content.
+Then, f_content should be converted into a list using the split("\n") method, splitting the text by line breaks.
+Then, import the random function and use the choice() method to randomly select a name.
+"""
+
+import random as rd
+
+with open("petnames.txt", "r") as file:
+    f_content = file.read()
+    # print(f_content)
+    f_content_list = f_content.split("\n") # Split the content of the file by new line
+    # print(f_content_list)
+    print(f"The name of your new pet is: {rd.choice(f_content_list)}") # The name of your new pet is: ...
+
+
+# Reading files with user input
+import random as rd
+f_name = input("Type the file name: ")
+
+with open(f_name) as file: # Ommited the mode "r" because it's the default mode
+    f_content = file.read()
+    f_content_list = f_content.split("\n")
+    print(f"The name of your new pet is: {rd.choice(f_content_list)}")
+    
