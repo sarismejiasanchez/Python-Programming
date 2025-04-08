@@ -62,3 +62,20 @@ Tower names passed as arguments:
 """
 # Actual function call
 hanoi(disks, 'A', 'B', 'C')
+
+"""
+Explanation:
+If you can imagine the disks in question as shown in the image, you can understand how the code correctly distributes the three disks from tower A to C, following the expected rules.
+
+Notice how the disk variable initially takes the number of disks as input and then is read or understood as the number of disks in question within the code.
+
+In the code block, the first section is the base condition that applies when using disk 1. Once it is executed, the flow returns to the rest of the execution outside the "if" condition.
+
+The remaining disks are moved by passing the source values to the helper with the destination as helper. The remaining disk is moved from source to destination. The remaining n-1 disks from the helper are moved from the helper to the destination with the source as helper.
+
+In the final section, the controller code takes the input of the number of disks I want to move. Based on that, I pass the values A, B, and C as the names of the towers and call the function.
+
+You will notice that it took 2^3 - 1 = 7 steps to complete the transfer, which meets my expectations.
+
+The Tower of Hanoi and recursion, in general, can be confusing, even for an avid Python programmer. That’s why the best way to understand recursion is by plugging in the values and doing a dry run using pencil and paper to see how the values change and which function is called in the code at each moment.
+"""
