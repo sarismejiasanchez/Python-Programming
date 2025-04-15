@@ -143,3 +143,81 @@ print(F.mro()) # [<class '__main__.F'>, <class '__main__.E'>, <class '__main__.D
 # Multiple inheritance, with all the advantages and flexibility it provides, 
 # should only be used if you have a solid command of Python as a language to avoid creating "spaghetti code" 
 # that is difficult to understand and maintain.
+
+# EXERCISE: WORKING WITH METHODS
+print(f"EXERCISE: WORKING WITH METHODS")
+
+# Exercise 1:
+class A:
+    def b(self):
+        return "Function inside A"
+
+class B:
+    pass
+
+class C:
+    def b(self):
+        return "Function inside C"
+
+class D(B, C, A):
+    pass
+
+class D(C):
+    pass
+
+d = D()
+print(d.b()) # Function inside C
+print(D.mro()) # [<class '__main__.D'>, <class '__main__.C'>, <class 'object'>]
+
+# Exercise 2:
+class A:
+    def c(self):
+        return "Function inside A"
+
+class B(A):
+    def c(self):
+        return "Function inside B"
+
+# class C(A, B):
+    # pass
+
+# class D(C):
+    # pass
+
+# d = D()
+# print(d.a)
+
+# class C(A, B):
+# TypeError: Cannot create a consistent method resolution
+# order (MRO) for bases A, B
+
+# Exercise 3:
+class A:
+    pass
+
+class B(A):
+    pass
+
+class C(B):
+    pass
+
+
+c = C()
+# print(c.a()) # AttributeError: 'C' object has no attribute 'a'
+
+# In Example 3 of the previous exercise, if we had modified the code to include a global variable 'a = 5' as follows:
+a = 5
+class A:
+    pass
+
+class B(A):
+    pass
+
+class C(B):
+    pass
+
+c = C()
+# print(c.a()) # AttributeError: 'C' object has no attribute 'a'
+
+# Will the code work, and what will the output be if it does?
+# No, the code will not work.
